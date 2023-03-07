@@ -1,0 +1,113 @@
+:root {
+    --text-blue: hsl(238, 29%, 16%);
+    --text--darkb: hsl(237, 12%, 33%);
+    --text--ldarkb: hsl(240, 6%, 50%);
+    --text-red: hsl(14, 88%, 65%);
+    --gradient-violent: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+    --divider: hsl(240, 5%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--gradient-violent), var(--gradient-blue));
+    min-width: 375px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-radius: 23px;
+    margin: 148px 24px;
+    padding: 28px 24px 48px 25px;
+    /* shaddow
+    background-image: url(/images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 50% 5; */
+}
+
+/*TEXT PART*/
+
+.accordion-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: var(--text--darkb);
+    margin-bottom: 13px;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.accordion-button::after {
+    content: '';
+    display: block;
+    background-image: url(/images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 8px;
+    height: 4px;
+}
+
+.accordion-button:focus-visible {
+    border: none;
+}
+
+.open {
+    font-weight: 700;
+    color: hsla(238, 29%, 17%, 1);
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.open::after {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: var(--text--ldarkb);
+    margin-bottom: 1rem;
+}
+
+.accordion-body p {
+    width: 279px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--text--ldarkb);
+}
+
+/*JS PART*/
+
+.collapse {
+    display: none;
+}
+
+.collapsing{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
