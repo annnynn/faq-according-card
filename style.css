@@ -22,6 +22,8 @@ body {
     min-height: 100vh;
     background-image: linear-gradient(var(--gradient-violent), var(--gradient-blue));
     min-width: 375px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 #faq-illustration-image-dekstop {
@@ -36,6 +38,7 @@ body {
 
 .accordion-item {
     border-bottom: 1px solid var(--text--ldarkb);
+    width: 279px;
 }
 
 
@@ -83,6 +86,7 @@ body {
 
 .text-container {
     padding: 28px 24px 48px 25px;
+    height: 450px;
 }
 
 /*Font Sizes*/
@@ -110,7 +114,7 @@ body {
 }
 
 .accordion {
-    padding: 0px 24px 16px 24px;
+    width: 300px;
 }
 
 .accordion-item {
@@ -122,7 +126,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   width: 250px;
 }
 
 
@@ -181,13 +184,17 @@ body {
     #box {
         display: block;
         position: absolute;
-        top: 330px;
+        top: 372px;
         left: 167px;
+    }
+
+    .accordion-item{
+        width: 350px;
     }
 
     .text-container {
         margin-left: 90px;
-        width: 450px;
+        width: 500px;
     }
 
     .accordion {
