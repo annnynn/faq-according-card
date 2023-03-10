@@ -1,11 +1,20 @@
-const accordionButton = document.querySelectorAll(".accordion-button");
-
-
-// querySelectorAll(აიღოს ყველა ელემენტი, რომელიც accordion-button - ის ქვეშ არის)
-document.querySelectorAll(".accordion-button").forEach(item => {
-    item.addEventListener('click', event => {
-        item.classList.toggle("open");
-        item.nextElementSibling.classList.toggle("collapse");
-    });
-
+const button = document.querySelectorAll(".accordion-button");
+document.querySelectorAll(".accordion-button").forEach((item) => {
+    item.addEventListener('click', (event) => {
+        // button-ს რომ დავაჭერ ტექსტი გახდეს bold
+        item.classList.toggle("bold-text")
+        // button-ს რომ დავაჭერ შეცვალოს arrow  
+        item.nextElementSibling.classList.toggle("transform-arrow");
+        // button -ს რომ დავაჭერ ჩამოიშალოს კონტენტი
+        item.parentElement.parentElement.querySelector(".accordion-collapse").classList.toggle("show");
+    })
 });
+
+
+
+ 
+
+
+
+
+

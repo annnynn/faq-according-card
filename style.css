@@ -15,72 +15,91 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Kumbh Sans', sans-serif;
     min-height: 100vh;
     background-image: linear-gradient(var(--gradient-violent), var(--gradient-blue));
     min-width: 375px;
 }
 
+#faq-illustration-image-dekstop {
+    display: none;
+}
+
+#faq-illustration-image-mobile {
+    margin-top: -107px;
+    width: 237px;
+
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--text--ldarkb);
+}
+
+
+
+.accordion-button:hover {
+    color: hsla(14, 88%, 65%, 1);
+}
+
+/*MOBILE*/
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-color: white;
-    border-radius: 23px;
-    margin: 148px 24px;
-    padding: 28px 24px 48px 25px;
-    /* shaddow
+    background-color: hsla(0, 0%, 100%, 1);
     background-image: url(/images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 50% 5; */
+    background-size: 240px;
+    background-position-x: center;
+    border-radius: 23px;
+    width: 360px;
+
 }
 
-/*TEXT PART*/
+#box {
+    display: none;
+}
 
-.accordion-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#arrow {
+    width: 8px;
+    height: 4px;
+    
+
+}
+
+.illustration {
+    margin: auto;
+    margin-top: -108px;
+    width: 237px;
+}
+
+.header {
     text-align: center;
-    border: none;
-    background-color: transparent;
+    margin-top: 38px;
+}
+
+.text-container {
+    padding: 28px 24px 48px 25px;
+}
+
+/*Font Sizes*/
+.accordion-button {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0px;
-    color: var(--text--darkb);
-    margin-bottom: 13px;
-    width: 100%;
-    margin-top: 19px;
-}
-
-.accordion-button::after {
-    content: '';
-    display: block;
-    background-image: url(/images/icon-arrow-down.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    width: 8px;
-    height: 4px;
-}
-
-.accordion-button:focus-visible {
     border: none;
+    background-color: transparent;
+    text-transform: initial;
 }
 
-.open {
-    font-weight: 700;
-    color: hsla(238, 29%, 17%, 1);
-    font-size: 13px;
-    line-height: 16px;
-}
-
-.open::after {
-    transform: rotate(180deg);
+.question-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .accordion-body {
@@ -88,26 +107,101 @@ body {
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0px;
-    color: var(--text--ldarkb);
-    margin-bottom: 1rem;
+    margin-top: 13px;
 }
 
-.accordion-body p {
-    width: 279px;
+.accordion {
+    padding: 0px 24px 16px 24px;
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--text--ldarkb);
+    padding-top: 19px;
+    padding-bottom: 18px;
 }
 
-/*JS PART*/
+.flex-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 250px;
+}
 
-.collapse {
+
+.accordion-collapse {
     display: none;
 }
 
-.collapsing{
-    height: 0;
-    overflow: hidden;
-    transition: height 0.35s ease;
+.bold-text {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    color: hsla(238, 29%, 17%, 1);
+}
+
+.show {
+    display: block;
+}
+
+.transform-arrow {
+    transform: rotate(180deg);
+}
+
+@media(min-width: 1440px) {
+
+    body {
+        max-width: 1440px;
+    }
+
+    #faq-illustration-image-dekstop {
+        display: block;
+        margin-left: -80px;
+    }
+
+    #faq-illustration-image-mobile {
+        display: none;
+    }
+
+    .card {
+        flex-direction: row;
+        background-image: url(/images/bg-pattern-desktop.svg);
+        background-position-x:1300%;
+        background-position-y: 65%;
+        background-size: 964px;
+        overflow: hidden;
+        width: 920px;
+        height: 509px;
+    }
+
+    #box {
+        display: block;
+        position: absolute;
+        top: 330px;
+        left: 167px;
+    }
+
+    .text-container {
+        margin-left: 90px;
+        width: 450px;
+    }
+
+    .accordion {
+        margin-top: 20px;
+    }
+
+    .header {
+        text-align: unset;
+        margin-top: 0px;
+        font-size: 32px;
+        line-height: 39.69px;
+        font-weight: 700;
+        margin-left: 24px;
+    }
+
+    .text-container {
+        height: 474px;
+    }
+
+    .flex-button{
+        width:335px;
+    }
 }
