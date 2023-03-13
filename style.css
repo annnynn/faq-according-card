@@ -37,15 +37,10 @@ body {
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--text--ldarkb);
-    width: 279px;
+    border-bottom: 1px solid hsla(240, 5%, 91%, 1);
 }
 
 
-
-.accordion-button:hover {
-    color: hsla(14, 88%, 65%, 1);
-}
 
 /*MOBILE*/
 .card {
@@ -67,10 +62,7 @@ body {
 }
 
 #arrow {
-    width: 8px;
-    height: 4px;
-    
-
+    object-fit: none;
 }
 
 .illustration {
@@ -82,11 +74,11 @@ body {
 .header {
     text-align: center;
     margin-top: 28px;
+    margin-bottom: 20px;
 }
 
 .text-container {
     padding: 28px 24px 48px 25px;
-    height: 450px;
 }
 
 /*Font Sizes*/
@@ -97,6 +89,8 @@ body {
     border: none;
     background-color: transparent;
     text-transform: initial;
+    color: hsla(237, 12%, 33%, 1);
+
 }
 
 .question-container {
@@ -111,6 +105,9 @@ body {
     line-height: 18px;
     letter-spacing: 0px;
     margin-top: 13px;
+    height: 0;
+    overflow: hidden;
+    color: hsla(240, 6%, 50%, 1);
 }
 
 .accordion {
@@ -118,8 +115,11 @@ body {
 }
 
 .accordion-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 19px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
 }
 
 .flex-button {
@@ -140,17 +140,18 @@ body {
     color: hsla(238, 29%, 17%, 1);
 }
 
-.show {
+.open {
     display: block;
 }
 
 .transform-arrow {
     transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
 }
 
 
-@media(min-width:375px){
-    .card{
+@media(min-width:375px) {
+    .card {
         margin-top: 80px;
     }
 }
@@ -173,12 +174,11 @@ body {
     .card {
         flex-direction: row;
         background-image: url(/images/bg-pattern-desktop.svg);
-        background-position-x:1300%;
+        background-position-x: 1300%;
         background-position-y: 65%;
         background-size: 964px;
         overflow: hidden;
         width: 920px;
-        height: 509px;
     }
 
     #box {
@@ -188,8 +188,12 @@ body {
         left: 167px;
     }
 
-    .accordion-item{
+    .accordion-item {
         width: 350px;
+
+        padding-top: 19px;
+        padding-bottom: 8px;
+
     }
 
     .text-container {
@@ -207,14 +211,15 @@ body {
         font-size: 32px;
         line-height: 39.69px;
         font-weight: 700;
-        margin-left: 24px;
+        margin-left: 0px;
     }
 
-    .text-container {
-        height: 474px;
+    .flex-button {
+        width: 335px;
+
     }
 
-    .flex-button{
-        width:335px;
+    .accordion-button:hover {
+        color: hsla(14, 88%, 65%, 1);
     }
 }

@@ -1,18 +1,27 @@
-const button = document.querySelectorAll(".accordion-button");
-document.querySelectorAll(".accordion-button").forEach((item) => {
+const button = document.querySelectorAll(".accordion-item");
+document.querySelectorAll(".accordion-item").forEach((item) => {
     item.addEventListener('click', (event) => {
-        // button-ს რომ დავაჭერ ტექსტი გახდეს bold
-        item.classList.toggle("bold-text")
-        // button-ს რომ დავაჭერ შეცვალოს arrow  
-        item.nextElementSibling.classList.toggle("transform-arrow");
-        // button -ს რომ დავაჭერ ჩამოიშალოს კონტენტი
-        item.parentElement.parentElement.querySelector(".accordion-collapse").classList.toggle("show");
-    })
+        // when click change text normal to bold
+        item.querySelector(".accordion-button").classList.toggle("bold-text");
+        // when click rotate arrow
+        item.querySelector("#arrow").classList.toggle("transform-arrow");
+        // give it height if it's open, else, remove
+        let content = item.querySelector(".accordion-body");
+        if (!item.classList.contains("open")) {
+            item.classList.add("open");
+            content.style.height = `${content.scrollHeight}px`;
+        } else {
+            item.classList.remove("open");
+            content.style.height = "0px";
+        }
+    });
 });
 
 
 
- 
+
+
+
 
 
 
