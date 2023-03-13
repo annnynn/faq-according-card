@@ -90,6 +90,7 @@ body {
     background-color: transparent;
     text-transform: initial;
     color: hsla(237, 12%, 33%, 1);
+    cursor: pointer;
 
 }
 
